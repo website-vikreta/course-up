@@ -2,14 +2,548 @@
 <html lang="en">
 
 <head>
+   <!-- Essentials -->
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Course Up</title>
+
+   <!-- Title of the Document -->
+   <title></title>
+
+   <!-- SEO basics -->
+   <meta name="description" content="">
+   <meta name="keywords" content="">
+   <meta name="author" content="">
+
+   <!-- favicon -->
+   <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+   <!-- style sheets -->
+   <link rel="stylesheet" href="./vendor/bootstrap/bootstrap.min.css">
+   <link rel="stylesheet" href="./vendor/slickslider/slick.css">
+   <link rel="stylesheet" href="./vendor/slickslider/slick-theme.css">
+   <link rel="stylesheet" href="./css/main.min.css">
+   <!-- <style>
+        inline css || compress css
+    </style> -->
+
+   <!-- critical JS -->
+   <script src=""></script>
 </head>
 
 <body>
-   <h1>Website Preview is Live</h1>
+
+   <!-- navigation bar -->
+   <header id="includeNavbar"></header>
+
+   <!-- hero of the page -->
+   <section class="hero">
+      <!-- blur overlay -->
+      <div class="overlayBlur"></div>
+      <!-- blur svgs -->
+      <img src="./assets/svgs/hero-red-ellipse.svg" alt="Red SVG image" class="redSvg">
+      <img src="./assets/svgs/hero-blue-ellipse.svg" alt="Blue SVG image" class="blueSvg">
+      <!-- Container -->
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-5 col-md-5 col-12 h-100">
+               <div class="content">
+                  <h1>Learn 1 to 1 LIVE online computer courses at your home.</h1>
+                  <p>We believe in personal attention and support to help you in your learning journey of your course.
+                  </p>
+                  <a href="#" class="btn solid">Apply for Demo</a>
+               </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 offset-md-1 ill">
+               <img src="./assets/svgs/hero-illustration.svg" alt="hero illustration">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- Why course up sectipn -->
+   <section class="whyCourseUp" id="whyCourseUp">
+      <!-- whyUs overlay -->
+      <div class="overlay"></div>
+
+      <!-- container -->
+      <div class="container">
+         <div class="heading">
+            <h2>Why CourseUp?</h2>
+         </div>
+
+         <div class="wrapper">
+            <div class="card">
+               <div class="image">
+                  <img src="./assets/svgs/why-us-flexible-timing.svg" alt="Flexible Timings">
+               </div>
+               <h3 class="cardHeading">Flexible Timings</h3>
+               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                  teachers availability.</p>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="./assets/svgs/why-us-curated-course.svg" alt="Curated Course">
+               </div>
+               <h3 class="cardHeading">Curated Course</h3>
+               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                  teachers availability.</p>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="./assets/svgs/why-us-certification.svg" alt="Certification">
+               </div>
+               <h3 class="cardHeading">Certification</h3>
+               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                  teachers availability.</p>
+            </div>
+            <div class="card">
+               <div class="image">
+                  <img src="./assets/svgs/why-us-lifetime-access.svg" alt="Lifetime Support">
+               </div>
+               <h3 class="cardHeading">Lifetime Support</h3>
+               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                  teachers availability.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- courses section -->
+   <section class="courses bg-light">
+      <div class="container">
+         <div class="heading">
+            <h2>Select your course</h2>
+         </div>
+
+         <div class="button-group filters-button-group">
+            <button class="button is-checked" data-filter="*">All Categories</button>
+            <button class="button" data-filter=".python">Python</button>
+            <button class="button" data-filter=".web">Web Development</button>
+            <button class="button" data-filter=".js">Java Script</button>
+            <button class="button" data-filter=".dataScience">Data Science</button>
+            <button class="button" data-filter=".design">Design</button>
+            <button class="button" data-filter=".dataScience">Data Science</button>
+            <button class="button" data-filter=".design">Design</button>
+         </div>
+
+         <div class="coursesSlider">
+            <div class="card python" data-category="python">
+               <div class="image">
+                  <img src="./assets/courses-img.png" alt="Course Image">
+                  <div class="discount">50% off</div>
+               </div>
+               <div class="cardBody">
+                  <div class="cardHeading">
+                     <h3>Advance Excel</h3>
+                     <p class="author">Jon Doe</p>
+                  </div>
+                  <p class="cardPara">Up your excel skills a notch, basics brush up also...</p>
+                  <div class="more">
+                     <div class="duration">
+                        <img src="./assets/svgs/courses-calender.svg" alt="Calender SVG" class="calender">
+                        <span>15 Days</span>
+                     </div>
+                     <div class="price">
+                        <h4>₹ 2500/-</h4>
+                        <span>
+                           <div class="strike">5000</div> 50% off
+                        </span>
+                     </div>
+                  </div>
+                  <a href="#" class="btn solid">Apply now</a>
+               </div>
+            </div>
+            <div class="card python" data-category="python">
+               <div class="image">
+                  <img src="./assets/courses-img.png" alt="Course Image">
+                  <div class="discount">50% off</div>
+               </div>
+               <div class="cardBody">
+                  <div class="cardHeading">
+                     <h3>Advance Excel</h3>
+                     <p class="author">Jon Doe</p>
+                  </div>
+                  <p class="cardPara">Up your excel skills a notch, basics brush up also...</p>
+                  <div class="more">
+                     <div class="duration">
+                        <img src="./assets/svgs/courses-calender.svg" alt="Calender SVG" class="calender">
+                        <span>15 Days</span>
+                     </div>
+                     <div class="price">
+                        <h4>₹ 2500/-</h4>
+                        <span>
+                           <div class="strike">5000</div> 50% off
+                        </span>
+                     </div>
+                  </div>
+                  <a href="#" class="btn solid">Apply now</a>
+               </div>
+            </div>
+            <div class="card js" data-category="js">
+               <div class="image">
+                  <img src="./assets/courses-img.png" alt="Course Image">
+                  <div class="discount">50% off</div>
+               </div>
+               <div class="cardBody">
+                  <div class="cardHeading">
+                     <h3>Advance Excel</h3>
+                     <p class="author">Jon Doe</p>
+                  </div>
+                  <p class="cardPara">Up your excel skills a notch, basics brush up also...</p>
+                  <div class="more">
+                     <div class="duration">
+                        <img src="./assets/svgs/courses-calender.svg" alt="Calender SVG" class="calender">
+                        <span>15 Days</span>
+                     </div>
+                     <div class="price">
+                        <h4>₹ 2500/-</h4>
+                        <span>
+                           <div class="strike">5000</div> 50% off
+                        </span>
+                     </div>
+                  </div>
+                  <a href="#" class="btn solid">Apply now</a>
+               </div>
+            </div>
+            <div class="card python" data-category="python">
+               <div class="image">
+                  <img src="./assets/courses-img.png" alt="Course Image">
+                  <div class="discount">50% off</div>
+               </div>
+               <div class="cardBody">
+                  <div class="cardHeading">
+                     <h3>Advance Excel</h3>
+                     <p class="author">Jon Doe</p>
+                  </div>
+                  <p class="cardPara">Up your excel skills a notch, basics brush up also...</p>
+                  <div class="more">
+                     <div class="duration">
+                        <img src="./assets/svgs/courses-calender.svg" alt="Calender SVG" class="calender">
+                        <span>15 Days</span>
+                     </div>
+                     <div class="price">
+                        <h4>₹ 2500/-</h4>
+                        <span>
+                           <div class="strike">5000</div> 50% off
+                        </span>
+                     </div>
+                  </div>
+                  <a href="#" class="btn solid">Apply now</a>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="bar">
+         <div class="container">
+            <div class="info">
+               <div class="image">
+                  <img src="./assets/flag-1.png" alt="Info Image">
+               </div>
+               <p>Over 230 teachers are here to give you one to one live classes.</p>
+            </div>
+            <div class="info">
+               <div class="image">
+                  <img src="./assets/flag-2.png" alt="Info Image">
+               </div>
+               <p>Choose from top instructors across the world.</p>
+            </div>
+            <div class="info">
+               <div class="image">
+                  <img src="./assets/flag-3.png" alt="Info Image">
+               </div>
+               <p>Learn at your own pace easily on the mobile and desktop.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- call to action section -->
+   <section class="cta">
+      <!-- overlay -->
+      <div class="ctaOverlay"></div>
+
+      <div class="container">
+         <div class="heading">
+            <h4>Not Sure where to begin?</h4>
+            <h2>Talk with us, Our Experts will help you</h2>
+         </div>
+
+         <div class="row">
+            <a href="#" class="btn">Join Live Class</a>
+            <a href="#" class="btn solid">Apply for Demo</a>
+         </div>
+      </div>
+   </section>
+
+   <!-- techers section -->
+   <section class="teachers">
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-3 col-md-3 col-12">
+               <div class="heading">
+                  <h2>My Teachers</h2>
+                  <div class="line"></div>
+               </div>
+               <p class="para">
+                  CourseUp teachers are experts, and industry experienced excited to share their experience and trusted
+                  tools with you.
+               </p>
+               <div class="sliderDots" id="teacherSliderDots"></div>
+
+               <a href="#" class="btn solid">Become a Teacher</a>
+            </div>
+            <div class="col-lg-8 col-md-8 col-12">
+               <div class="teacherSlider">
+                  <div class="card">
+                     <div class="image"><img src="./assets/teacher-1.png" alt="Teacher Image"></div>
+                     <div class="content">
+                        <h3 class="cardHeading">Fashion Designer</h3>
+                        <p class="name">Chandler Bing</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="image"><img src="./assets/teacher-2.png" alt="Teacher Image"></div>
+                     <div class="content">
+                        <h3 class="cardHeading">Developer</h3>
+                        <p class="name">Chandler Bing</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="image"><img src="./assets/teacher-3.png" alt="Teacher Image"></div>
+                     <div class="content">
+                        <h3 class="cardHeading">Coder</h3>
+                        <p class="name">Chandler Bing</p>
+                     </div>
+                  </div>
+                  <div class="card">
+                     <div class="image"><img src="./assets/teacher-1.png" alt="Teacher Image"></div>
+                     <div class="content">
+                        <h3 class="cardHeading">Fashion Designer</h3>
+                        <p class="name">Chandler Bing</p>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <!-- testimonials -->
+   <section class="testimonials bg-light">
+      <div class="heading">
+         <h2>Hear from our Students</h2>
+      </div>
+      <!-- arrows -->
+      <div class="slickArrow" id="testimonialsArrow">
+         <button class="slickBtn left"><img src="./assets/svgs/arrow.svg" alt=""></button>
+         <button class="slickBtn right"><img src="./assets/svgs/arrow.svg" alt=""></button>
+      </div>
+
+      <div class="testimonialsSlider">
+         <div class="card">
+            <div class="image"><img src="./assets/student-1.png" alt="Student Image"></div>
+            <div class="content">
+               <div class="quote">"</div>
+               <p class="para">
+                  We know managing time can be difficult, Classes can be scheduled as per yours and teachers
+                  availability. scheduled as per yours and teachers availability.
+               </p>
+               <h4 class="name">Mona Singh</h4>
+            </div>
+         </div>
+         <div class="card">
+            <div class="image"><img src="./assets/student-1.png" alt="Student Image"></div>
+            <div class="content">
+               <div class="quote">"</div>
+               <p class="para">
+                  We know managing time can be difficult, Classes can be scheduled as per yours and teachers
+                  availability. scheduled as per yours and teachers availability.
+               </p>
+               <h4 class="name">Mona Singh</h4>
+            </div>
+         </div>
+         <div class="card">
+            <div class="image"><img src="./assets/student-1.png" alt="Student Image"></div>
+            <div class="content">
+               <div class="quote">"</div>
+               <p class="para">
+                  We know managing time can be difficult, Classes can be scheduled as per yours and teachers
+                  availability. scheduled as per yours and teachers availability.
+               </p>
+               <h4 class="name">Mona Singh</h4>
+            </div>
+         </div>
+         <div class="card">
+            <div class="image"><img src="./assets/student-1.png" alt="Student Image"></div>
+            <div class="content">
+               <div class="quote">"</div>
+               <p class="para">
+                  We know managing time can be difficult, Classes can be scheduled as per yours and teachers
+                  availability. scheduled as per yours and teachers availability.
+               </p>
+               <h4 class="name">Mona Singh</h4>
+            </div>
+         </div>
+         <div class="card">
+            <div class="image"><img src="./assets/student-1.png" alt="Student Image"></div>
+            <div class="content">
+               <div class="quote">"</div>
+               <p class="para">
+                  We know managing time can be difficult, Classes can be scheduled as per yours and teachers
+                  availability. scheduled as per yours and teachers availability.
+               </p>
+               <h4 class="name">Mona Singh</h4>
+            </div>
+         </div>
+         <div class="card">
+            <div class="image"><img src="./assets/student-1.png" alt="Student Image"></div>
+            <div class="content">
+               <div class="quote">"</div>
+               <p class="para">
+                  We know managing time can be difficult, Classes can be scheduled as per yours and teachers
+                  availability. scheduled as per yours and teachers availability.
+               </p>
+               <h4 class="name">Mona Singh</h4>
+            </div>
+         </div>
+         <div class="card">
+            <div class="image"><img src="./assets/student-1.png" alt="Student Image"></div>
+            <div class="content">
+               <div class="quote">"</div>
+               <p class="para">
+                  We know managing time can be difficult, Classes can be scheduled as per yours and teachers
+                  availability. scheduled as per yours and teachers availability.
+               </p>
+               <h4 class="name">Mona Singh</h4>
+            </div>
+         </div>
+      </div>
+
+      <!-- live demo -->
+      <div class="container">
+         <section class="liveDemo">
+            <div class="line"></div>
+            <div class="text">
+               <div class="heading">
+                  <h2>Book a Live Demo. It's free!</h2>
+               </div>
+               <p class="para">CourseUp teachers are experts, and industry experienced excited to share their experience
+                  and trusted tools with you.</p>
+            </div>
+            <div class="button">
+               <a href="#" class="btn">Request Live Demo</a>
+            </div>
+         </section>
+      </div>
+   </section>
+
+   <!-- Footer -->
+   <footer>
+      <div class="container">
+         <div class="row">
+            <div class="col-lg-5 col-md-5 col-12 about">
+               <h1>CourseUp</h1>
+
+               <h2>
+                  <div class="line"></div>
+                  Contact
+                  <div class="line"></div>
+               </h2>
+
+               <h4 class="subHeading">Pune:</h4>
+               <p class="footerPara mt-2">9567 Turner Trace Apt BC C3G8A4</p>
+
+               <div class="contact">
+                  <p>
+                     <img src="./assets/svgs/cell-phone.svg" alt="Phone Icon">
+                     9837283254
+                  </p>
+                  <p>
+                     <img src="./assets/svgs/mail.svg" alt="Email Icon">
+                     info@courseup.in
+                  </p>
+               </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-12 offset-md-1 links">
+               <div class="heading">
+                  <h4 class="subHeading">CourseUp Computer Classes</h4>
+                  <div class="line light"></div>
+               </div>
+
+               <div class="row">
+                  <div class="col-lg-3 col-12">
+                     <a href="#">Tally ERP</a>
+                     <a href="#">Advanced Excel</a>
+                     <a href="#">Microsoft Office</a>
+                     <a href="#">Photoshop</a>
+                  </div>
+                  <div class="col-lg-3 col-12">
+                     <a href="#">C</a>
+                     <a href="#">C++</a>
+                     <a href="#">Python</a>
+                     <a href="#">HTML/CSS</a>
+                  </div>
+                  <div class="col-lg-3 col-12">
+                     <a href="#">Illustrator</a>
+                     <a href="#">CorelDraw/Inkscape</a>
+                     <a href="#">OS - Linux</a>
+                     <a href="#">Core Java</a>
+                  </div>
+               </div>
+
+               <div class="heading">
+                  <h4 class="subHeading">Company</h4>
+                  <div class="line light"></div>
+               </div>
+
+               <div class="row">
+                  <div class="col-lg-3 col-12">
+                     <a href="#">Become a Teacher</a>
+                     <a href="#">Terms & Condition</a>
+                  </div>
+                  <div class="col-lg-3 col-12">
+                     <a href="#">Refund Policy</a>
+                     <a href="#">Contact Us</a>
+                  </div>
+                  <div class="col-lg-3 col-12">
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- seperator -->
+         <hr>
+
+         <section class="copy">
+            <p class="rights">
+               Copyright &copy; 2020 CourseUp. All Right Reserved.
+            </p>
+            <div class="social">
+               <a href="#"><img src="./assets/social/facebook.svg" alt="Facebook"></a>
+               <a href="#"><img src="./assets/social/instagram.svg" alt="Instagram"></a>
+               <a href="#"><img src="./assets/social/twitter.svg" alt="Twitter"></a>
+               <a href="#"><img src="./assets/social/youtube.svg" alt="YouTube"></a>
+               <a href="#"><img src="./assets/social/linkedin.svg" alt="Linkedin"></a>
+            </div>
+         </section>
+
+      </div>
+
+   </footer>
+
+   <!-- including jquery -->
+   <script src="./vendor/jquery/jquery.min.js"></script>
+   <!-- including bootstrap js -->
+   <script src="./vendor/bootstrap/bootstrap.min.js"></script>
+   <!-- including isotope plugin -->
+   <script src="./vendor/isotope/isotope.pkgd.min.js"></script>
+   <!-- slick js -->
+   <script src="./vendor/slickslider/slick.min.js"></script>
+   <!-- including custom javascript -->
+   <script src="./js/main.js"></script>
+   <script src="./js/hero.js"></script>
 </body>
 
 </html>

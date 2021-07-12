@@ -1,0 +1,62 @@
+@mixin flex-between {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+@mixin flex-center {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+@mixin section-padding {
+   padding: 150px 0;
+}
+
+@mixin container-100 {
+   .container {
+      position: relative;
+      z-index: 100
+   }
+}
+
+@mixin slick-dots {
+   .slick-dots {
+      text-align: left !important;
+
+      li {
+         margin-right: 4px;
+         width: 8px;
+         height: 8px;
+      }
+
+      li button::before {
+         content: '' !important;
+         width: 8px;
+         height: 8px;
+         border-radius: 8px;
+         background: $blue-color;
+         opacity: 0.3;
+      }
+
+      li.slick-active button::before {
+         opacity: 1;
+      }
+   }
+}
+
+@mixin slick-arrow {
+   .slickArrow {
+      button {
+         border: none;
+         background: none;
+         outline: none;
+         margin-right: 1rem;
+      }
+
+      .right {
+         transform: scaleX(-1);
+      }
+   }
+}

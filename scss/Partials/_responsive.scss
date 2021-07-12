@@ -1,0 +1,148 @@
+@media screen and (max-width:1300px) {
+   .container {
+      padding: 0 100px;
+   }
+
+   // hero
+   .hero {
+      .content h1 {
+         font-size: 2.5rem !important;
+      }
+   }
+}
+
+@media screen and (max-width:992px) {
+   .container {
+      padding: 0 50px;
+   }
+
+   .hero {
+      .content h1 {
+         font-size: 2rem !important;
+      }
+   }
+
+   .cta .ctaOverlay {
+      background-position: 0% 15% !important;
+   }
+}
+
+@media screen and (max-width:768px) {
+   section {
+      padding: 80px 0 !important;
+   }
+
+   .heading h2 {
+      font-size: 1.8rem;
+   }
+
+   .container {
+      padding: 0 30px;
+   }
+
+   .hero {
+      @include flex-center;
+
+      .row {
+         flex-direction: column-reverse;
+      }
+
+      .content h1 {
+         font-size: 2rem !important;
+      }
+
+      a {
+         margin-top: 20px;
+      }
+
+      // red svg
+      .redSvg {
+         top: 20% !important;
+         max-width: 50% !important;
+      }
+
+      // blue svg
+      .blueSvg {
+         opacity: 0.2 !important;
+      }
+
+      // illustration
+      .ill {
+         justify-content: flex-start !important;
+         margin-bottom: 1rem;
+      }
+
+      .ill img {
+         max-width: 70%;
+         margin-left: -20px;
+      }
+   }
+
+   .whyCourseUp {
+      .wrapper {
+         display: flex;
+         flex-wrap: wrap;
+
+         .card {
+            max-width: 200px;
+         }
+      }
+   }
+
+   .courses {
+      .bar .container .info {
+         width: 100%;
+         margin: 0;
+
+         &:not(:last-child) {
+            border-right: none;
+            border-bottom: 1px solid $gray-color;
+         }
+
+         &:not(:first-child) {
+            padding-left: 0 !important;
+         }
+      }
+   }
+
+   .cta .row {
+      gap: 1rem !important;
+   }
+
+   .teachers .teacherSlider {
+      margin-top: 3rem !important;
+   }
+
+   .teachers {
+      &:after {
+         width: 100% !important;
+      }
+   }
+
+   .testimonials .liveDemo {
+      flex-direction: column !important;
+      padding: 2rem 1.5rem !important;
+
+      .line {
+         display: none !important;
+      }
+
+      .text {
+         padding: 0 !important;
+         max-width: 100% !important;
+      }
+
+      .button {
+         width: 100% !important;
+         margin-top: 1rem;
+         text-align: left !important;
+      }
+   }
+
+}
+
+@media screen and (max-width:500px) {
+   .card {
+      max-width: 80% !important;
+   }
+}

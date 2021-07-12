@@ -1,0 +1,17 @@
+// importing google fonts
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+
+// Font variables
+$primary-font : 'Roboto',
+sans-serif;
+
+$font-weight : ("thin":100, "light": 300, "regular" : 400, "medium": 500, "bold":700, "black":900);
+
+// colors
+$dark-color : #101010;
+$blue-color : #506CF0;
+$green-color : #21DF60;
+$gray-color : #AEAEAE;
+
+// animations
+$transition : 0.35s ease-in-out;

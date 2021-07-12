@@ -1,0 +1,193 @@
+body.scroll-down .navbar {
+   top: -150px;
+}
+
+body.scroll-up .navbar {
+   top: 0;
+   background: white;
+   padding: 0.8rem 0;
+   box-shadow: 0 5px 10px 0 rgba($color: #000000, $alpha: 0.05);
+}
+
+.navbar {
+   padding: 1.75rem 0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   width: 100%;
+   z-index: 999;
+   transition: $transition;
+
+   input {
+      display: none
+   }
+
+   .container {
+      @include flex-between;
+   }
+
+   .logo {
+      @include flex-between;
+
+      label {
+         display: none;
+      }
+
+      a {
+         display: inline-block;
+         font-size: 1.5rem;
+         font-weight: map-get($map: $font-weight, $key: medium);
+         color: $dark-color;
+      }
+   }
+
+   ul {
+      @include flex-center;
+      gap: 2.5rem;
+
+      li>a {
+         display: inline-block;
+         font-weight: map-get($map: $font-weight, $key: medium);
+         color: $dark-color;
+         position: relative;
+         transition: $transition;
+         padding: 0.25rem 0;
+
+         &.active {
+            color: $blue-color;
+         }
+
+         &:hover {
+            color: $blue-color;
+         }
+
+         &:hover:after {
+            width: 100%;
+         }
+
+         &::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            height: 2px;
+            width: 0;
+            background: $blue-color;
+            transition: $transition;
+         }
+      }
+   }
+}
+
+// making navbar responsive
+@media screen and (max-width:1300px) {
+   .navbar ul {
+      gap: 2.2rem;
+   }
+}
+
+@media screen and (max-width:992px) {
+   .navbar ul {
+      gap: 2rem;
+
+      a {
+         font-size: 0.95rem;
+      }
+   }
+
+   .navbar .logo a {
+      font-size: 1.3rem;
+   }
+}
+
+@media screen and (max-width:768px) {
+   .navbar {
+      .logo {
+         width: 100%;
+         position: relative;
+         z-index: 999;
+
+         a {
+            font-size: 1.5rem;
+         }
+
+         .toggleBtn {
+            display: block;
+            width: 30px;
+            height: 20px;
+            position: relative;
+            cursor: pointer;
+            margin: 0;
+
+            .line {
+               width: 100%;
+               height: 2px;
+               background: $dark-color;
+               position: absolute;
+               transition: $transition;
+            }
+
+            .one {
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+            }
+
+            .two {
+               top: 2%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+            }
+
+            .three {
+               top: 98%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+            }
+         }
+      }
+
+      .toggleCheck:checked~.logo .toggleBtn {
+         .one {
+            opacity: 0;
+            visibility: hidden;
+         }
+
+         .two {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+         }
+
+         .three {
+            top: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+         }
+      }
+
+      ul {
+         position: absolute;
+         flex-direction: column;
+         background: white;
+         width: 50%;
+         height: 100vh;
+         z-index: 1000;
+         @include flex-center;
+         top: 0;
+         gap: 1.5rem;
+         font-size: 1rem;
+         left: -1000px;
+         transition: $transition;
+         box-shadow: 0 0 10px 0 rgba($color: #000000, $alpha: 0.2);
+      }
+
+      .toggleCheck:checked~ul {
+         left: 0;
+      }
+   }
+}
+
+@media screen and (max-width:450px) {
+   .navbar ul {
+      width: 70%;
+   }
+}

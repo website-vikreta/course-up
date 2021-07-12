@@ -1,0 +1,515 @@
+@import "./Partials/variables";
+@import "./Partials/resets";
+@import "./Partials/global";
+
+@import "./Utilities/mixins";
+
+@import "./Components/btns";
+@import "./Components/navigation";
+@import "./Components/footer";
+
+@import "./Partials/responsive";
+
+
+
+// ? STYLING HERO
+// ? ==============================
+.hero {
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(120deg, #FAFAFA 20%, #6391b980 100%);
+   position: relative;
+   border-bottom-left-radius: 100px;
+   @include container-100;
+
+   [class *=col-] {
+      // height: 100vh;
+      @include flex-center;
+   }
+
+   // layer blur
+   .overlayBlur {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      filter: blur(100px);
+      border-bottom-left-radius: 100px;
+      background: rgba($color: #fff, $alpha: 0.1);
+      z-index: 1;
+   }
+
+   // red svg
+   .redSvg {
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      max-width: 30%;
+      filter: blur(50px);
+      opacity: 0.08;
+      z-index: 2;
+   }
+
+   // blue svg
+   .blueSvg {
+      position: absolute;
+      left: 30%;
+      bottom: 0;
+      max-width: 20%;
+      filter: blur(50px);
+      opacity: 0.1;
+      z-index: 2;
+   }
+
+   .content {
+      h1 {
+         font-size: 3rem;
+         font-weight: map-get($map: $font-weight, $key: bold);
+         color: $dark-color;
+         opacity: 0.8;
+      }
+
+      p {
+         color: $dark-color;
+         opacity: 0.5;
+         margin-top: 8px;
+      }
+
+      a {
+         display: inline-block;
+         margin-top: 30px;
+      }
+   }
+}
+
+
+// ? STYLING WHY COURSEUP
+// ? ==============================
+.whyCourseUp {
+   @include section-padding;
+   text-align: center;
+   position: relative;
+   @include container-100;
+
+   .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: url("../assets/svgs/why-us-background.svg") center no-repeat;
+      opacity: 0.5;
+   }
+
+   .heading {
+      color: $blue-color;
+   }
+
+   .wrapper {
+      @include flex-center;
+      gap: 3rem;
+      margin-top: 3rem;
+
+      .card {
+         background: none;
+         border: none;
+      }
+
+      .cardHeading {
+         font-size: 1.1rem;
+         font-weight: map-get($map: $font-weight, $key: medium);
+         color: $dark-color;
+         margin-bottom: 5px;
+      }
+
+      .cardPara {
+         font-size: 0.9rem;
+         font-weight: map-get($map: $font-weight, $key: light);
+      }
+
+      .image {
+         width: 5rem;
+         height: 5rem;
+         background: white;
+         box-shadow: 0 0 5px 0 rgba($color: #000000, $alpha: 0.2);
+         border-radius: 50%;
+         margin: auto;
+         margin-bottom: 1rem;
+         @include flex-center;
+
+
+         img {
+            max-width: 2.5rem;
+         }
+      }
+   }
+}
+
+// ? STYLING WHY COURSES
+// ? ==============================
+.courses {
+   padding: 4rem 0;
+
+   // slider
+   .coursesSlider {
+
+      .card {
+         max-width: calc(25% - 1rem);
+         border-radius: 0.5rem;
+         overflow: hidden;
+         margin: 0.5rem 1rem 0.5rem 0;
+
+         // image
+         .image {
+            width: 100%;
+            position: relative;
+
+            .discount {
+               background: $green-color;
+               position: absolute;
+               top: 1rem;
+               right: 0;
+               border-top-left-radius: 5px;
+               border-bottom-left-radius: 5px;
+               font-size: 0.8rem;
+               color: white;
+               padding: 0.2rem 1.5rem;
+            }
+         }
+
+         // card body
+         .cardBody {
+            padding: 1rem;
+
+            .cardHeading {
+               @include flex-between;
+
+               h3 {
+                  font-size: 1.1rem;
+                  color: $dark-color;
+                  font-weight: map-get($map: $font-weight, $key: bold);
+               }
+
+               .author {
+                  font-size: 12px;
+                  color: $dark-color;
+                  opacity: 0.7;
+               }
+            }
+
+            .cardPara {
+               font-size: 0.8rem;
+               color: $dark-color;
+               opacity: 0.7;
+               margin: 5px 0 0.5rem 0;
+            }
+         }
+
+         // more details
+         .more {
+            @include flex-between;
+
+            .duration {
+               display: flex;
+               align-items: center;
+
+               img {
+                  max-width: 1rem;
+                  margin-right: 0.25rem;
+               }
+
+               span {
+                  font-size: 0.9rem;
+                  color: $dark-color;
+                  opacity: 0.7;
+                  white-space: nowrap;
+               }
+            }
+
+            .price {
+               h4 {
+                  font-size: 0.9rem;
+                  font-weight: map-get($map: $font-weight, $key: bold);
+                  color: $dark-color;
+               }
+
+               span {
+                  display: flex;
+                  align-items: center;
+                  font-size: 10px;
+                  color: $blue-color;
+
+                  .strike {
+                     color: $gray-color;
+                     font-size: 0.8rem;
+                     text-decoration: line-through;
+                     line-height: 100%;
+                     padding-right: 4px;
+                  }
+               }
+            }
+         }
+
+         .btn {
+            max-width: initial !important;
+            width: 100%;
+            padding: 0.25rem;
+            margin: 0;
+            margin-top: 1rem;
+         }
+      }
+   }
+
+   // button group
+   .button-group {
+      display: flex;
+      align-items: center;
+      gap: 1rem 2rem;
+      flex-wrap: wrap;
+      margin: 2rem 0 1.5rem 0;
+
+      button {
+         background: none;
+         border: none;
+         padding: 0.25rem 0.35rem;
+         border-bottom: 2px solid transparent;
+         transition: $transition;
+         outline: none;
+
+         &.is-checked {
+            border-color: $blue-color;
+         }
+      }
+   }
+
+   // bottom bar
+   .bar {
+      background: $blue-color;
+      color: white;
+      margin-top: 4rem;
+
+      .container {
+         @include flex-between;
+         flex-wrap: wrap;
+      }
+
+      .info {
+         display: flex;
+         align-items: center;
+         // flex-wrap: wrap;
+         font-size: 0.9rem;
+         line-height: 130%;
+         padding: 1rem 2rem 1rem 0;
+         margin-right: 1rem;
+         width: calc(33.33% - 1rem);
+
+         .image {
+            width: 40px;
+            height: 40px;
+            background: white;
+            border-radius: 50%;
+            @include flex-center;
+            margin-right: 0.5rem;
+
+            img {
+               max-width: 25px;
+            }
+         }
+
+         p {
+            width: calc(100% - 50px - 2rem);
+         }
+
+         &:not(:last-child) {
+            border-right: 1px solid $gray-color;
+         }
+
+         &:not(:first-child) {
+            padding-left: 2rem;
+         }
+
+         &:last-child {
+            padding-right: 0 !important;
+            margin-right: 0 !important;
+         }
+      }
+   }
+}
+
+// ? STYLING CTA
+// ? ==============================
+.cta {
+   position: relative;
+   @include section-padding;
+   @include container-100;
+   text-align: center;
+
+   .ctaOverlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      background: url("../assets/svgs/cta-background.svg") top no-repeat;
+      background-position: -20% 15%;
+   }
+
+   .row {
+      justify-content: center;
+      gap: 1.5rem;
+      margin-top: 2rem;
+   }
+
+}
+
+
+// ? STYLING TEACHERS
+// ? ==============================
+.teachers {
+   padding: 60px 0;
+   position: relative;
+
+   &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 85%;
+      height: 100%;
+      background: rgba($color: #00B6FA, $alpha: 0.05);
+      z-index: -1;
+   }
+
+   .para {
+      font-size: 0.9rem;
+      color: $dark-color;
+      opacity: 0.7;
+      margin: 0.5rem 0;
+   }
+
+   .btn {
+      margin-top: 4rem;
+   }
+
+   .card {
+      border-radius: 5px;
+      overflow: hidden;
+      margin-right: 1.5rem;
+
+      .content {
+         padding: 1rem;
+         text-align: center;
+      }
+
+      .cardHeading {
+         font-size: 1.1rem;
+         color: $dark-color;
+      }
+
+      .name {
+         font-size: 0.9rem;
+         color: $dark-color;
+         opacity: 0.7;
+         margin-top: 0.5rem;
+      }
+   }
+
+   // repositioning slider dots
+   .sliderDots {
+      position: relative;
+      @include slick-dots;
+   }
+
+   .teacherSlider {
+      margin: 0;
+   }
+}
+
+// ? STYLING TESTIMONIALS
+// ? ==============================
+.testimonials {
+   text-align: center;
+   margin-top: 100px;
+   @include slick-arrow;
+   padding: 80px 0;
+
+   .slickArrow {
+      margin: 1.5rem auto;
+   }
+
+   .card {
+      margin: 0.5rem;
+      background: none;
+      border: none;
+
+      .content {
+         width: 90%;
+         background: white;
+         padding: 1rem;
+         margin: auto;
+         margin-top: -80px;
+         position: relative;
+         z-index: 100;
+         box-shadow: 0 0 20px 0 rgba($color: #000000, $alpha: 0.05);
+      }
+
+      .quote {
+         font-size: 4rem;
+         line-height: 80%;
+      }
+
+      .para {
+         font-size: 0.8rem;
+         color: $dark-color;
+         opacity: 0.5;
+         margin-top: -1rem;
+         font-weight: map-get($map: $font-weight, $key: light);
+      }
+
+      .name {
+         font-size: 1rem;
+         color: $dark-color;
+         font-weight: map-get($map: $font-weight, $key: medium);
+         margin-top: 0.5rem;
+      }
+   }
+
+   .liveDemo {
+      background: $blue-color;
+      border-radius: 10px;
+      box-shadow: 0 5px 20px 0 rgba($color: #000000, $alpha: 0.1);
+      margin-top: 120px;
+      padding: 2rem;
+
+      display: flex;
+      align-items: center;
+
+      .line {
+         width: 8px;
+         height: 100px;
+         border-radius: 5px;
+         background: white;
+      }
+
+      .text {
+         color: white;
+         text-align: left;
+         padding: 0 2rem;
+         max-width: 70%;
+
+         .para {
+            opacity: 0.6;
+            margin-top: 0.5rem;
+         }
+      }
+
+      .button {
+         width: 30%;
+         text-align: center;
+      }
+   }
+}
