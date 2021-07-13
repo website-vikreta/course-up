@@ -35,12 +35,16 @@ p {
   margin: 0;
 }
 
+body,
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   width: 100%;
   min-height: 100vh;
   position: relative;
   font-family: "Roboto", sans-serif;
-  scroll-behavior: smooth;
   overflow-x: hidden;
 }
 
@@ -541,6 +545,29 @@ footer .copy .social a img {
   .courseDetails .fixedCard {
     margin: 0 !important;
   }
+  .contactUs .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .contactUs * {
+    max-width: initial !important;
+    width: 100% !important;
+  }
+  .contactUs .contactForm .ill {
+    display: none;
+  }
+  .contactUs .contactForm {
+    margin-bottom: 2rem;
+  }
+  .contactUs .heading.one {
+    display: none;
+  }
+  .contactUs .heading.two {
+    display: block !important;
+    margin-bottom: 2rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -681,6 +708,15 @@ footer .copy .social a img {
   }
   .courseDetails {
     padding: 120px 0 1rem 0 !important;
+  }
+  .contactUs {
+    padding-bottom: 60px !important;
+  }
+  .contactUs .contactForm {
+    padding: 1.5rem !important;
+  }
+  .contactUs .contactForm input:not(input[type=submit]) {
+    border-color: #ddd !important;
   }
 }
 
@@ -1721,5 +1757,90 @@ footer .copy .social a img {
 .courseDetails .fixedCard .price .off {
   color: #506CF0;
   font-weight: 500;
+}
+
+.contactUs {
+  padding: 150px 0;
+}
+
+.contactUs .heading h2 {
+  font-weight: 700;
+  font-size: 2.5rem;
+  max-width: 380px;
+}
+
+.contactUs .para {
+  font-size: 0.9rem;
+  color: #101010;
+  font-weight: 300;
+  opacity: 0.7;
+  margin: 1rem 0;
+  max-width: 380px;
+}
+
+.contactUs .details a {
+  display: block;
+  margin: 0.5rem 0;
+  color: #506CF0;
+}
+
+.contactUs .contactForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+  background: white;
+  -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+          box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  padding: 5rem 3rem;
+}
+
+.contactUs .contactForm:after {
+  content: '';
+  position: absolute;
+  top: 1.5rem;
+  left: 1.5rem;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  background: #506CF0;
+  z-index: -1;
+  opacity: 0.1;
+}
+
+.contactUs .contactForm .ill {
+  justify-self: flex-start;
+  margin-right: 2rem;
+  margin-bottom: 1rem;
+}
+
+.contactUs .contactForm .ill img {
+  max-width: 200px;
+}
+
+.contactUs .contactForm .inputs {
+  width: 100%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.contactUs .contactForm .inputs input:not(input[type=submit]) {
+  width: 100%;
+  padding: 1.25rem;
+  border: 1px solid #AEAEAE;
+  border-radius: 0;
+}
+
+.contactUs .contactForm .inputs input[type=submit] {
+  border-radius: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

@@ -45,6 +45,35 @@
          margin: 0 !important;
       }
    }
+
+   // conact
+   .contactUs {
+      .row {
+         flex-direction: column-reverse;
+      }
+
+      * {
+         max-width: initial !important;
+         width: 100% !important;
+      }
+
+      .contactForm .ill {
+         display: none;
+      }
+
+      .contactForm {
+         margin-bottom: 2rem;
+      }
+
+      .heading.one {
+         display: none;
+      }
+
+      .heading.two {
+         display: block !important;
+         margin-bottom: 2rem;
+      }
+   }
 }
 
 @media screen and (max-width:768px) {
@@ -192,6 +221,20 @@
    .courseDetails {
       padding: 120px 0 1rem 0 !important;
    }
+
+   .contactUs {
+      padding-bottom: 60px !important;
+   }
+
+   .contactUs .contactForm {
+      padding: 1.5rem !important;
+
+      input:not(input[type=submit]) {
+         border-color: #ddd !important;
+      }
+   }
+
+
 }
 
 @media screen and (max-width:500px) {}

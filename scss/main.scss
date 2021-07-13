@@ -734,3 +734,77 @@
       }
    }
 }
+
+
+// ? STYLING CONTACt
+// ? ==============================
+.contactUs {
+   @include spacing-150;
+
+   .heading h2 {
+      @include font-weight(bold);
+      font-size: 2.5rem;
+      max-width: 380px;
+   }
+
+   .para {
+      @include para2 {
+         @include font-weight(light);
+         @include opacity(0.7);
+         margin: 1rem 0;
+         max-width: 380px;
+      }
+   }
+
+   .details a {
+      display: block;
+      margin: 0.5rem 0;
+      color: $blue-color;
+   }
+
+   .contactForm {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      background: white;
+      box-shadow: $box-shadow;
+      position: relative;
+      padding: 5rem 3rem;
+
+      &:after {
+         content: '';
+         @include position($top: 1.5rem, $left: 1.5rem);
+         background: $blue-color;
+         z-index: -1;
+         opacity: 0.1;
+      }
+
+      .ill {
+         justify-self: flex-start;
+         margin-right: 2rem;
+         margin-bottom: 1rem;
+      }
+
+      .ill img {
+         max-width: 200px;
+      }
+
+      .inputs {
+         width: 100%;
+         flex: 1;
+
+         input:not(input[type=submit]) {
+            width: 100%;
+            padding: 1.25rem;
+            border: 1px solid $gray-color;
+            border-radius: 0;
+         }
+
+         input[type=submit] {
+            border-radius: 0;
+            width: 100%;
+         }
+      }
+   }
+}
