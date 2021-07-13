@@ -1,6 +1,7 @@
 // include header and footer
 $(function () {
    $("#includeNavbar").load("./includes/navbar.html");
+   $("footer").load("./includes/footer.html");
 })
 
 // sticky navbar

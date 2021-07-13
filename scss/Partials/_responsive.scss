@@ -9,6 +9,13 @@
          font-size: 2.5rem !important;
       }
    }
+
+   // courseDetails
+   .courseDetails {
+      .fixedCard {
+         width: 100% !important;
+      }
+   }
 }
 
 @media screen and (max-width:992px) {
@@ -24,6 +31,23 @@
 
    .cta .ctaOverlay {
       background-position: 0% 15% !important;
+   }
+
+   .courseDetails {
+      [class *=col-] {
+         padding: 0.5rem !important;
+      }
+
+      .courseDescription,
+      .infographics,
+      .fixedCard {
+         padding: 1.8rem !important;
+         margin: 1.25rem 0 !important;
+      }
+
+      .fixedCard {
+         margin: 0 !important;
+      }
    }
 }
 
@@ -139,6 +163,9 @@
       }
    }
 
+   .courseDetails {
+      padding: 120px 0 1rem 0 !important;
+   }
 }
 
 @media screen and (max-width:500px) {

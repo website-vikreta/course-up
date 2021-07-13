@@ -175,9 +175,10 @@ body.scroll-up .navbar {
 
 .navbar .logo a {
   display: inline-block;
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: #101010;
+}
+
+.navbar .logo a img {
+  max-width: 120px;
 }
 
 .navbar ul {
@@ -504,6 +505,9 @@ footer .copy .social a img {
   .hero .content h1 {
     font-size: 2.5rem !important;
   }
+  .courseDetails .fixedCard {
+    width: 100% !important;
+  }
 }
 
 @media screen and (max-width: 992px) {
@@ -515,6 +519,18 @@ footer .copy .social a img {
   }
   .cta .ctaOverlay {
     background-position: 0% 15% !important;
+  }
+  .courseDetails [class*=col-] {
+    padding: 0.5rem !important;
+  }
+  .courseDetails .courseDescription,
+  .courseDetails .infographics,
+  .courseDetails .fixedCard {
+    padding: 1.8rem !important;
+    margin: 1.25rem 0 !important;
+  }
+  .courseDetails .fixedCard {
+    margin: 0 !important;
   }
 }
 
@@ -616,6 +632,9 @@ footer .copy .social a img {
     width: 100% !important;
     margin-top: 1rem;
     text-align: left !important;
+  }
+  .courseDetails {
+    padding: 120px 0 1rem 0 !important;
   }
 }
 
@@ -1222,5 +1241,273 @@ footer .copy .social a img {
 .testimonials .liveDemo .button {
   width: 30%;
   text-align: center;
+}
+
+.courseDetails {
+  padding: 150px 0;
+}
+
+.courseDetails .heading h2 {
+  font-size: 1.8rem !important;
+}
+
+.courseDetails .courseDescription,
+.courseDetails .infographics,
+.courseDetails .fixedCard {
+  padding: 2.5rem;
+  margin: 2.5rem 0;
+  -webkit-box-shadow: 0 0 50px 0 #00000010;
+          box-shadow: 0 0 50px 0 #00000010;
+  border-radius: 8px;
+}
+
+.courseDetails .coursePara {
+  font-size: 0.9rem;
+  color: #101010;
+  font-weight: 300;
+  margin: 10px 0;
+}
+
+.courseDetails .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20px 0;
+}
+
+.courseDetails .title h4 {
+  font-size: 1.1rem;
+  color: #101010;
+  font-weight: 500;
+}
+
+.courseDetails .title p {
+  font-size: 0.9rem;
+}
+
+.courseDetails .card {
+  border: none;
+  max-width: initial !important;
+  width: 100%;
+}
+
+.courseDetails .card:not(:last-child) {
+  border-bottom: 1px solid #dfdfdf;
+}
+
+.courseDetails .card-header {
+  background: white;
+  border: none;
+  outline: none;
+  padding: 0.5rem 0;
+}
+
+.courseDetails .card-header button {
+  text-align: left !important;
+  width: 100%;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #101010;
+}
+
+.courseDetails .card-header button:after {
+  display: none;
+}
+
+.courseDetails .card-header img {
+  width: 0.5rem;
+}
+
+.courseDetails .card-body {
+  padding: 0rem 2rem;
+}
+
+.courseDetails .card-body h4 {
+  font-size: 0.9rem;
+}
+
+.courseDetails .card-body p {
+  font-size: 0.8rem;
+  color: #101010;
+  font-weight: 300;
+  opacity: 0.7;
+}
+
+.courseDetails .card-body li {
+  margin: 5px 0;
+}
+
+.courseDetails .infographics .nav-pills {
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+.courseDetails .infographics .nav-link {
+  font-weight: 500;
+  color: #101010;
+  opacity: 0.4;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  border-radius: 0;
+  background: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.5rem;
+}
+
+.courseDetails .infographics .nav-link.active {
+  opacity: 1;
+  color: #506CF0;
+  border-color: #506CF0;
+}
+
+.courseDetails .infographics p.para {
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.7;
+  margin: 8px 0;
+}
+
+.courseDetails .instructor .profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.courseDetails .instructor .profile h5 {
+  font-size: 1.1rem;
+  color: #101010;
+}
+
+.courseDetails .instructor .profile img {
+  max-width: 50px;
+}
+
+.courseDetails .fixedCard {
+  width: 90%;
+  margin: 0 auto;
+  padding: 2rem;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 4rem;
+}
+
+.courseDetails .fixedCard .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0.25rem;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.courseDetails .fixedCard .tags span {
+  background: #E83151;
+  color: white;
+  font-size: 0.7rem;
+  padding: 4px 8px 4px 16px;
+  border-radius: 3px;
+  position: relative;
+}
+
+.courseDetails .fixedCard .tags span:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 4px;
+  height: 4px;
+  border-radius: 4px;
+  background: white;
+}
+
+.courseDetails .fixedCard .heading h4 {
+  font-size: 1.1rem;
+}
+
+.courseDetails .fixedCard p.para {
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: #101010;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+.courseDetails .fixedCard .features li {
+  color: #101010;
+  font-size: 1rem;
+  margin: 4px 0;
+}
+
+.courseDetails .fixedCard .features li.bullet {
+  position: relative;
+  padding-left: 10px;
+}
+
+.courseDetails .fixedCard .features li.bullet:after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 4px;
+  background: #21DF60;
+}
+
+.courseDetails .fixedCard .price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 8px;
+  margin: 1rem 0;
+}
+
+.courseDetails .fixedCard .price h1 {
+  font-size: 1.5rem;
+  color: #E83151;
+  font-weight: 700;
+}
+
+.courseDetails .fixedCard .price .strike {
+  color: #AEAEAE;
+  text-decoration: line-through;
+}
+
+.courseDetails .fixedCard .price .off {
+  color: #506CF0;
+  font-weight: 500;
 }
 /*# sourceMappingURL=main.css.map */
