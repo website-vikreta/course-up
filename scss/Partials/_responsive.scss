@@ -29,10 +29,6 @@
       }
    }
 
-   .cta .ctaOverlay {
-      background-position: 0% 15% !important;
-   }
-
    .courseDetails {
       [class *=col-] {
          padding: 0.5rem !important;
@@ -52,18 +48,6 @@
 }
 
 @media screen and (max-width:768px) {
-   section {
-      padding: 80px 0 !important;
-   }
-
-   .heading h2 {
-      font-size: 1.8rem;
-   }
-
-   .container {
-      padding: 0 30px;
-   }
-
    .hero {
       @include flex-center;
 
@@ -76,7 +60,7 @@
       }
 
       a {
-         margin-top: 20px;
+         margin-top: 0 !important;
       }
 
       // red svg
@@ -97,35 +81,73 @@
       }
 
       .ill img {
-         max-width: 70%;
+         max-width: 80%;
          margin-left: -20px;
+      }
+
+      .wrapper {
+         flex-direction: column-reverse !important;
+
+         #heroSliderDots {
+            margin-top: initial !important;
+            margin-bottom: 1.5rem !important;
+         }
       }
    }
 
    .whyCourseUp {
+      .heading {
+         text-align: left;
+      }
+
       .wrapper {
          display: flex;
          flex-wrap: wrap;
+         gap: 2rem !important;
+      }
 
-         .card {
-            max-width: 200px;
-         }
+      .card {
+         max-width: 100%;
+         display: flex !important;
+         align-items: center !important;
+         gap: 1rem !important;
+         flex-direction: row !important;
+         text-align: left;
+         flex-wrap: initial !important;
+      }
+
+      .card .image {
+         min-width: 80px;
+         margin: 0 !important;
       }
    }
 
    .courses {
-      .bar .container .info {
-         width: 100%;
-         margin: 0;
+      .button-group {
+         justify-content: center;
+      }
+   }
 
-         &:not(:last-child) {
-            border-right: none;
-            border-bottom: 1px solid $gray-color;
-         }
 
-         &:not(:first-child) {
-            padding-left: 0 !important;
-         }
+   .bar .container .info {
+      width: 100%;
+      margin: 0;
+
+      &:not(:last-child) {
+         border-right: none;
+         border-bottom: 1px solid $gray-color;
+      }
+
+      &:not(:first-child) {
+         padding-left: 0 !important;
+      }
+   }
+
+   .cta {
+      margin-top: 0 !important;
+
+      .ctaOverlay {
+         display: none;
       }
    }
 
@@ -140,6 +162,10 @@
    .teachers {
       &:after {
          width: 100% !important;
+      }
+
+      .btn {
+         margin-top: 1.5rem !important;
       }
    }
 
@@ -168,8 +194,4 @@
    }
 }
 
-@media screen and (max-width:500px) {
-   .card {
-      max-width: 80% !important;
-   }
-}
+@media screen and (max-width:500px) {}

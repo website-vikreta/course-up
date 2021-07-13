@@ -44,18 +44,51 @@
       <img src="./assets/svgs/hero-red-ellipse.svg" alt="Red SVG image" class="redSvg">
       <img src="./assets/svgs/hero-blue-ellipse.svg" alt="Blue SVG image" class="blueSvg">
       <!-- Container -->
+
       <div class="container">
          <div class="row">
-            <div class="col-lg-5 col-md-5 col-12 h-100">
+            <div class="col-lg-6 col-md-6 col-12">
                <div class="content">
-                  <h1>Learn 1 to 1 LIVE online computer courses at your home.</h1>
-                  <p>We believe in personal attention and support to help you in your learning journey of your course.
-                  </p>
-                  <a href="#" class="btn solid">Apply for Demo</a>
+                  <div class="hero-slider">
+                     <div>
+                        <h1>Learn 1 to 1 LIVE online computer courses at your home.</h1>
+                        <p>We believe in personal attention and support to help you in your learning journey of your
+                           course.
+                        </p>
+                     </div>
+                     <div>
+                        <h1>Computer courses that are useful for everyone.</h1>
+                        <p>If you are a student, working or own a business, we have all types of courses that will help
+                           you in your journey.
+                        </p>
+                     </div>
+                     <div>
+                        <h1>Take a free demo course.</h1>
+                        <p>Apply for any course you like or if confused, talk with our experts. We will arrange a free
+                           demo lecture for you. Cancel anytime.
+                        </p>
+                     </div>
+                  </div>
+
+                  <div class="wrapper">
+                     <a href="#" class="btn solid">Apply for Demo</a>
+                     <!-- nav dots -->
+                     <div class="sliderDots" id="heroSliderDots"></div>
+                  </div>
                </div>
             </div>
-            <div class="col-lg-6 col-md-6 col-12 offset-md-1 ill">
-               <img src="./assets/svgs/hero-illustration.svg" alt="hero illustration">
+            <div class="col-lg-6 col-md-6 col-12 ill">
+               <div class="hero-slider-ill">
+                  <div class="slide">
+                     <img src="./assets/svgs/hero-illustration.svg" alt="hero illustration" class="img-fluid w-100">
+                  </div>
+                  <div class="slide">
+                     <img src="./assets/svgs/hero-illustration.svg" alt="hero illustration" class="img-fluid w-100">
+                  </div>
+                  <div class="slide">
+                     <img src="./assets/svgs/hero-illustration.svg" alt="hero illustration" class="img-fluid w-100">
+                  </div>
+               </div>
             </div>
          </div>
       </div>
@@ -64,7 +97,7 @@
    <!-- Why course up sectipn -->
    <section class="whyCourseUp" id="whyCourseUp">
       <!-- whyUs overlay -->
-      <div class="overlay"></div>
+      <!-- <div class="overlay"></div> -->
 
       <!-- container -->
       <div class="container">
@@ -77,33 +110,41 @@
                <div class="image">
                   <img src="./assets/svgs/why-us-flexible-timing.svg" alt="Flexible Timings">
                </div>
-               <h3 class="cardHeading">Flexible Timings</h3>
-               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
-                  teachers availability.</p>
+               <div class="carddText">
+                  <h3 class="cardHeading">Flexible Timings</h3>
+                  <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                     teachers availability.</p>
+               </div>
             </div>
             <div class="card">
                <div class="image">
                   <img src="./assets/svgs/why-us-curated-course.svg" alt="Curated Course">
                </div>
-               <h3 class="cardHeading">Curated Course</h3>
-               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
-                  teachers availability.</p>
+               <div class="carddText">
+                  <h3 class="cardHeading">Curated Course</h3>
+                  <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                     teachers availability.</p>
+               </div>
             </div>
             <div class="card">
                <div class="image">
                   <img src="./assets/svgs/why-us-certification.svg" alt="Certification">
                </div>
-               <h3 class="cardHeading">Certification</h3>
-               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
-                  teachers availability.</p>
+               <div class="carddText">
+                  <h3 class="cardHeading">Certification</h3>
+                  <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                     teachers availability.</p>
+               </div>
             </div>
             <div class="card">
                <div class="image">
                   <img src="./assets/svgs/why-us-lifetime-access.svg" alt="Lifetime Support">
                </div>
-               <h3 class="cardHeading">Lifetime Support</h3>
-               <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
-                  teachers availability.</p>
+               <div class="carddText">
+                  <h3 class="cardHeading">Lifetime Support</h3>
+                  <p class="cardPara">We know managing time can be difficult, Classes can be scheduled as per yours and
+                     teachers availability.</p>
+               </div>
             </div>
          </div>
       </div>
@@ -117,14 +158,14 @@
          </div>
 
          <div class="button-group filters-button-group">
-            <button class="button is-checked" data-filter="*">All Categories</button>
-            <button class="button" data-filter=".python">Python</button>
-            <button class="button" data-filter=".web">Web Development</button>
-            <button class="button" data-filter=".js">Java Script</button>
-            <button class="button" data-filter=".dataScience">Data Science</button>
-            <button class="button" data-filter=".design">Design</button>
-            <button class="button" data-filter=".dataScience">Data Science</button>
-            <button class="button" data-filter=".design">Design</button>
+            <button class="filterBtn is-checked" data-filter="*">All Categories</button>
+            <button class="filterBtn" data-filter=".python">Python</button>
+            <button class="filterBtn" data-filter=".web">Web Development</button>
+            <button class="filterBtn" data-filter=".js">Java Script</button>
+            <button class="filterBtn" data-filter=".dataScience">Data Science</button>
+            <button class="filterBtn" data-filter=".design">Design</button>
+            <button class="filterBtn" data-filter=".dataScience">Data Science</button>
+            <button class="filterBtn" data-filter=".design">Design</button>
          </div>
 
          <div class="coursesSlider">
@@ -206,7 +247,33 @@
                   <a href="#" class="btn solid">Apply now</a>
                </div>
             </div>
-            <div class="card python" data-category="python">
+            <div class="card js" data-category="web">
+               <div class="image">
+                  <img src="./assets/courses-img.png" alt="Course Image">
+                  <div class="discount">50% off</div>
+               </div>
+               <div class="cardBody">
+                  <div class="cardHeading">
+                     <h3>Advance Excel</h3>
+                     <p class="author">Jon Doe</p>
+                  </div>
+                  <p class="cardPara">Up your excel skills a notch, basics brush up also...</p>
+                  <div class="more">
+                     <div class="duration">
+                        <img src="./assets/svgs/courses-calender.svg" alt="Calender SVG" class="calender">
+                        <span>15 Days</span>
+                     </div>
+                     <div class="price">
+                        <h4>₹ 2500/-</h4>
+                        <span>
+                           <div class="strike">5000</div> 50% off
+                        </span>
+                     </div>
+                  </div>
+                  <a href="#" class="btn solid">Apply now</a>
+               </div>
+            </div>
+            <div class="card web" data-category="web">
                <div class="image">
                   <img src="./assets/courses-img.png" alt="Course Image">
                   <div class="discount">50% off</div>
@@ -234,27 +301,28 @@
             </div>
          </div>
       </div>
+   </section>
 
-      <div class="bar">
-         <div class="container">
-            <div class="info">
-               <div class="image">
-                  <img src="./assets/flag-1.png" alt="Info Image">
-               </div>
-               <p>Over 230 teachers are here to give you one to one live classes.</p>
+   <!-- small bar -->
+   <section class="bar">
+      <div class="container">
+         <div class="info">
+            <div class="image">
+               <img src="./assets/flag-1.png" alt="Info Image">
             </div>
-            <div class="info">
-               <div class="image">
-                  <img src="./assets/flag-2.png" alt="Info Image">
-               </div>
-               <p>Choose from top instructors across the world.</p>
+            <p>Over 230 teachers are here to give you one to one live classes.</p>
+         </div>
+         <div class="info">
+            <div class="image">
+               <img src="./assets/flag-2.png" alt="Info Image">
             </div>
-            <div class="info">
-               <div class="image">
-                  <img src="./assets/flag-3.png" alt="Info Image">
-               </div>
-               <p>Learn at your own pace easily on the mobile and desktop.</p>
+            <p>Choose from top instructors across the world.</p>
+         </div>
+         <div class="info">
+            <div class="image">
+               <img src="./assets/flag-3.png" alt="Info Image">
             </div>
+            <p>Learn at your own pace easily on the mobile and desktop.</p>
          </div>
       </div>
    </section>
@@ -316,6 +384,71 @@
                         <h3 class="cardHeading">Coder</h3>
                         <p class="name">Chandler Bing</p>
                      </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="faq">
+      <div class="container">
+         <div class="heading">
+            <h2>Frequently Asked Questions</h2>
+         </div>
+
+         <div id="accordion">
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true"
+                     aria-controls="collapseOne">
+                     Microsoft Word, Excel, Powerpoint, Outlook. You will learn to create Documents
+
+                     <span class="toggleArrow"><img src="./assets/svgs/chevron-down.svg" alt="Down Arrow"
+                           class="img-fluid"></span>
+                  </button>
+               </div>
+
+               <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Saepe molestias numquam officia in
+                        facilis expedita!</p>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true"
+                     aria-controls="collapseTwo">
+                     Microsoft Word, Excel, Powerpoint, Outlook. You will learn to create Documents
+
+                     <span class="toggleArrow"><img src="./assets/svgs/chevron-down.svg" alt="Down Arrow"
+                           class="img-fluid"></span>
+                  </button>
+               </div>
+
+               <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Qui commodi inventore, provident
+                        voluptatum consequuntur excepturi?</p>
+                  </div>
+               </div>
+            </div>
+            <div class="card">
+               <div class="card-header" id="headingOne">
+                  <button class="btn btn-link" data-toggle="collapse" data-target="#collapseThree" aria-expanded="true"
+                     aria-controls="collapseThree">
+                     Microsoft Word, Excel, Powerpoint, Outlook. You will learn to create Documents
+
+                     <span class="toggleArrow"><img src="./assets/svgs/chevron-down.svg" alt="Down Arrow"
+                           class="img-fluid"></span>
+                  </button>
+               </div>
+
+               <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                  <div class="card-body">
+                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam delectus doloribus placeat
+                        officiis nostrum quasi?</p>
                   </div>
                </div>
             </div>

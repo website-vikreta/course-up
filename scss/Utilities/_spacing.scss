@@ -1,0 +1,15 @@
+@mixin spacing-100 {
+   padding: 100px 0;
+}
+
+@mixin spacing-120 {
+   padding: 120px 0;
+
+   @include responsive-768 {
+      padding: 60px 0;
+   }
+}
+
+@mixin spacing-150 {
+   padding: 150px 0;
+}
