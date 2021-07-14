@@ -15,12 +15,31 @@
       </div>
 
       <ul>
-         <li><a href="../index.html#" class="active">Home</a></li>
-         <li><a href="../index.html#courses">Courses</a></li>
-         <li><a href="../index.html#about">About Us</a></li>
-         <li><a href="../index.html#teachers">My Teachers</a></li>
-         <li><a href="../index.html#faq">FAQ's</a></li>
-         <li><a href="../index.html#testimonials">Testimonials</a></li>
+         <li class="link"><a href="../index.html#">Home</a></li>
+         <li class="link"><a href="../index.html#courses">Courses</a></li>
+         <li class="link"><a href="../index.html#about">About Us</a></li>
+         <li class="link"><a href="../index.html#teachers">My Teachers</a></li>
+         <li class="link"><a href="../index.html#faq">FAQ's</a></li>
+         <li class="link"><a href="../index.html#testimonials">Testimonials</a></li>
       </ul>
    </div>
 </nav>
+
+<!-- making navbar button to unhide navbar -->
+<script>
+   const mediaQuery = window.matchMedia('(max-width: 768px)');
+   console.log(mediaQuery.matches);
+   if (mediaQuery.matches == true) {
+      var items = document.getElementsByClassName("link");
+      const checkbox = document.getElementById("toggleCheck");
+      for (var i = 0; i < items.length; i++) {
+         items[i].addEventListener("click", () => {
+            console.log(checkbox.checked);
+            if (checkbox.checked == true)
+               checkbox.checked = false;
+            else
+               checkbox.checked = true;
+         });
+      }
+   }
+</script>
