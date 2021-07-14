@@ -93,7 +93,7 @@
          }
 
          font-size: 1rem;
-         font-weight: map-get($map: $font-weight, $key: medium);
+         @include font-weight(normal);
          color: $dark-color;
       }
 
@@ -118,8 +118,14 @@
 
       li {
          margin: 5px 0;
+
+         &::marker {
+            font-size: 0.8rem;
+         }
       }
    }
+
+   @content;
 }
 
 // media queries

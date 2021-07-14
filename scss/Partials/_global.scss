@@ -55,3 +55,118 @@ body {
       }
    }
 }
+
+.noteItalic {
+   font-style: italic;
+   @include para3;
+   color: $blue-color;
+}
+
+// course slider
+// slider
+.coursesSlider {
+   .card {
+      width: 100%;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      margin: 0.5rem 1rem 0.5rem 0;
+
+      // image
+      .image {
+         .discount {
+            background: $green-color;
+            position: absolute;
+            top: 1rem;
+            right: 0;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            font-size: 0.8rem;
+            color: white;
+            padding: 0.2rem 1.5rem;
+         }
+      }
+
+      // card body
+      .cardBody {
+         padding: 1rem;
+
+         .cardHeading {
+            @include flex-between;
+
+            h3 {
+               @include title2 {
+                  @include font-weight(bold);
+               }
+            }
+
+            .author {
+               @include para2 {
+                  @include opacity(0.7);
+               }
+            }
+         }
+
+         .cardPara {
+            @include para3 {
+               @include opacity(0.7);
+            }
+
+            margin: 5px 0 0.5rem 0;
+         }
+      }
+
+      // more details
+      .more {
+         @include flex-between;
+
+         .duration {
+            display: flex;
+            align-items: center;
+
+            img {
+               max-width: 1rem;
+               margin-right: 0.25rem;
+            }
+
+            span {
+               @include para2 {
+                  @include opacity(0.7);
+               }
+
+               white-space: nowrap;
+            }
+         }
+
+         .price {
+            h4 {
+               @include para2 {
+                  @include font-weight(bold);
+               }
+            }
+
+            span {
+               display: flex;
+               align-items: center;
+               font-size: 10px;
+               color: $blue-color;
+
+               .strike {
+                  color: $gray-color;
+                  font-size: 0.8rem;
+                  text-decoration: line-through;
+                  line-height: 100%;
+                  padding-right: 4px;
+               }
+            }
+         }
+      }
+
+      .btn {
+         min-width: initial !important;
+         width: 100%;
+         padding: 0.25rem;
+         margin: 0;
+         margin-top: 1rem;
+      }
+   }
+}

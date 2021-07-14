@@ -170,114 +170,6 @@
 .courses {
    @include spacing-120;
 
-   // slider
-   .coursesSlider {
-      .card {
-         width: 100%;
-         border-radius: 0.5rem;
-         overflow: hidden;
-         margin: 0.5rem 1rem 0.5rem 0;
-
-         // image
-         .image {
-            .discount {
-               background: $green-color;
-               position: absolute;
-               top: 1rem;
-               right: 0;
-               border-top-left-radius: 5px;
-               border-bottom-left-radius: 5px;
-               font-size: 0.8rem;
-               color: white;
-               padding: 0.2rem 1.5rem;
-            }
-         }
-
-         // card body
-         .cardBody {
-            padding: 1rem;
-
-            .cardHeading {
-               @include flex-between;
-
-               h3 {
-                  @include title2 {
-                     @include font-weight(bold);
-                  }
-               }
-
-               .author {
-                  @include para2 {
-                     @include opacity(0.7);
-                  }
-               }
-            }
-
-            .cardPara {
-               @include para3 {
-                  @include opacity(0.7);
-               }
-
-               margin: 5px 0 0.5rem 0;
-            }
-         }
-
-         // more details
-         .more {
-            @include flex-between;
-
-            .duration {
-               display: flex;
-               align-items: center;
-
-               img {
-                  max-width: 1rem;
-                  margin-right: 0.25rem;
-               }
-
-               span {
-                  @include para2 {
-                     @include opacity(0.7);
-                  }
-
-                  white-space: nowrap;
-               }
-            }
-
-            .price {
-               h4 {
-                  @include para2 {
-                     @include font-weight(bold);
-                  }
-               }
-
-               span {
-                  display: flex;
-                  align-items: center;
-                  font-size: 10px;
-                  color: $blue-color;
-
-                  .strike {
-                     color: $gray-color;
-                     font-size: 0.8rem;
-                     text-decoration: line-through;
-                     line-height: 100%;
-                     padding-right: 4px;
-                  }
-               }
-            }
-         }
-
-         .btn {
-            min-width: initial !important;
-            width: 100%;
-            padding: 0.25rem;
-            margin: 0;
-            margin-top: 1rem;
-         }
-      }
-   }
-
    // button group
    .button-group {
       display: flex;
@@ -406,7 +298,7 @@
    }
 
    .btn {
-      margin-top: 4rem;
+      margin-top: 2rem;
    }
 
    .card {
@@ -447,14 +339,16 @@
 // ? ==============================
 .faq {
    @include spacing-120;
-   @include accordion;
+
+   @include accordion {
+      max-width: 800px !important;
+      margin: auto;
+   }
 
    .heading {
       text-align: center;
       margin-bottom: 2rem;
    }
-
-
 }
 
 // ? STYLING TESTIMONIALS
@@ -516,6 +410,7 @@
 
       display: flex;
       align-items: center;
+      justify-content: space-between;
 
       .line {
          width: 8px;
@@ -529,6 +424,7 @@
          text-align: left;
          padding: 0 2rem;
          max-width: 70%;
+         width: 100%;
 
          .para {
             opacity: 0.6;
@@ -543,22 +439,50 @@
    }
 }
 
+// ? STYLING ABOUT US
+// ? ==============================
+
+.aboutUs {
+   @include spacing-120;
+   text-align: center;
+
+   .heading .line {
+      margin: 0 auto;
+   }
+
+   p.para {
+      @include para1 {
+         max-width: 768px;
+         @include font-weight(light);
+         @include opacity(0.8);
+         margin: 1rem auto;
+      }
+   }
+}
+
 
 // ? STYLING COURSE DETAILS
 // ? ==============================
 
 .courseDetails {
    @include section-padding;
+   padding-bottom: 0;
    @include accordion;
 
    .heading h2 {
       font-size: 1.8rem !important;
    }
 
+   .headerImg {
+      border-radius: 5px;
+      overflow: hidden;
+   }
+
    // course description
    .courseDescription,
    .infographics,
-   .fixedCard {
+   .fixedCard,
+   .additionalDetails {
       padding: 2.5rem;
       margin: 2.5rem 0;
       box-shadow: 0 0 50px 0 #00000010;
@@ -574,12 +498,10 @@
 
    .title {
       @include flex-between;
-      margin: 20px 0;
+      margin: 3rem 0 20px 0;
 
       h4 {
-         font-size: 1.1rem;
-         color: $dark-color;
-         font-weight: map-get($map: $font-weight, $key: medium);
+         @include title2;
       }
 
       p {
@@ -588,7 +510,8 @@
    }
 
    // infographics
-   .infographics {
+   .infographics,
+   .additionalDetails {
       .nav-pills {
          gap: 2rem;
          margin-top: 1.5rem;
@@ -611,11 +534,21 @@
          }
       }
 
-      p.para {
+      p.para,
+      ul li {
          font-size: 0.9rem;
          font-weight: map-get($map: $font-weight, $key: light);
          opacity: 0.7;
          margin: 8px 0;
+      }
+
+      ul.details {
+         list-style: disc;
+         padding-left: 1.1rem;
+      }
+
+      .heading {
+         margin-top: 2rem;
       }
    }
 
@@ -733,6 +666,10 @@
          }
       }
    }
+}
+
+.relatedCourses {
+   @include spacing-120;
 }
 
 
