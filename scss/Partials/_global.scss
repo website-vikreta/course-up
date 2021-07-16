@@ -37,9 +37,10 @@ body {
    }
 
    .line {
-      width: 100px;
+      width: 80px;
       height: 3px;
       background: $blue-color;
+      border-radius: 5px;
 
       &.light {
          background: white;
@@ -69,7 +70,8 @@ body {
       width: 100%;
       border-radius: 0.5rem;
       overflow: hidden;
-      margin: 0.5rem 1rem 0.5rem 0;
+      margin: 0.5rem 1rem 0.5rem 6px;
+      box-shadow: $box-shadow4;
 
       // image
       .image {

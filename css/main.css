@@ -75,9 +75,10 @@ body {
 }
 
 .heading .line {
-  width: 100px;
+  width: 80px;
   height: 3px;
   background: #506CF0;
+  border-radius: 5px;
 }
 
 .heading .line.light {
@@ -104,7 +105,9 @@ body {
   width: 100%;
   border-radius: 0.5rem;
   overflow: hidden;
-  margin: 0.5rem 1rem 0.5rem 0;
+  margin: 0.5rem 1rem 0.5rem 6px;
+  -webkit-box-shadow: 0px 0px 6px #00000029;
+          box-shadow: 0px 0px 6px #00000029;
 }
 
 .coursesSlider .card .image .discount {
@@ -259,6 +262,78 @@ body {
   .btn {
     padding: 0.4 !important;
   }
+  .btn:hover:after {
+    display: none !important;
+  }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  z-index: 1000;
+  -webkit-transition: 0.35s ease-in-out;
+  transition: 0.35s ease-in-out;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.preloader h1 {
+  font-weight: 700;
+  position: relative;
+  z-index: 10;
+  overflow: hidden;
+}
+
+.preloader h1:after {
+  position: absolute;
+  top: 90%;
+  left: 0;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  content: '';
+  height: 5px;
+  width: 50px;
+  border-radius: 5px;
+  background: #506CF0;
+  z-index: -1;
+  -webkit-animation: animate 2s ease-in-out alternate infinite;
+          animation: animate 2s ease-in-out alternate infinite;
+}
+
+.preloader.hide {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes animate {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: 100%;
+  }
+}
+
+@keyframes animate {
+  0% {
+    left: -50px;
+  }
+  100% {
+    left: 100%;
+  }
 }
 
 body.scroll-down .navbar {
@@ -274,7 +349,7 @@ body.scroll-up .navbar {
 }
 
 .navbar {
-  padding: 1.75rem 0;
+  padding: 2rem 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -555,9 +630,12 @@ footer .contact p img {
   margin-right: 0.5rem;
 }
 
+footer .links .row {
+  gap: 2rem;
+}
+
 footer .links [class*=col-] {
   padding: 0 1rem;
-  margin: 1rem 0;
 }
 
 footer .links a {
@@ -569,6 +647,7 @@ footer .links a {
   transition: 0.35s ease-in-out;
   display: inline-block;
   width: 100%;
+  white-space: nowrap;
 }
 
 footer .links a:hover {
@@ -622,9 +701,16 @@ footer .copy .social a img {
 }
 
 @media screen and (max-width: 768px) {
+  footer .links .row {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
   footer .links [class*=col-] {
-    padding: 0 1rem;
-    margin: 1rem 0 0 0;
+    padding: 0 1rem !important;
+  }
+  footer .links [class*=col-]:first-child {
+    margin: 1rem 0 0 !important;
   }
   footer .links .heading {
     margin-top: 1.5rem;
@@ -697,7 +783,7 @@ footer .copy .social a img {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
   .hero {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -714,6 +800,9 @@ footer .copy .social a img {
     -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
             flex-direction: column-reverse;
+  }
+  .hero .content {
+    width: 100% !important;
   }
   .hero .content h1 {
     font-size: 2rem !important;
@@ -755,12 +844,13 @@ footer .copy .social a img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    -ms-flex-wrap: wrap !important;
+        flex-wrap: wrap !important;
     gap: 2rem !important;
   }
   .whyCourseUp .card {
     max-width: 100%;
+    width: 100% !important;
     display: -webkit-box !important;
     display: -ms-flexbox !important;
     display: flex !important;
@@ -775,6 +865,9 @@ footer .copy .social a img {
     text-align: left;
     -ms-flex-wrap: initial !important;
         flex-wrap: initial !important;
+    -webkit-box-flex: initial !important;
+        -ms-flex: initial !important;
+            flex: initial !important;
   }
   .whyCourseUp .card .image {
     min-width: 80px;
@@ -803,7 +896,15 @@ footer .copy .social a img {
     display: none;
   }
   .cta .row {
-    gap: 1rem !important;
+    gap: 0.25rem !important;
+    margin: 2rem 0 0 !important;
+    width: 100%;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+  }
+  .cta .row .btn {
+    min-width: 160px !important;
   }
   .teachers .teacherSlider {
     margin-top: 3rem !important;
@@ -893,9 +994,6 @@ footer .copy .social a img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -949,7 +1047,8 @@ footer .copy .social a img {
 }
 
 .hero .content {
-  width: 100%;
+  width: 80%;
+  padding: 1rem;
 }
 
 .hero .content h1 {
@@ -962,8 +1061,8 @@ footer .copy .social a img {
 .hero .content p {
   font-size: 1rem;
   color: #101010;
-  opacity: 0.6;
-  margin-top: 8px;
+  opacity: 0.5;
+  margin-top: 10px;
 }
 
 .hero .content a {
@@ -1037,6 +1136,9 @@ footer .copy .social a img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-align: start !important;
+      -ms-flex-align: start !important;
+          align-items: flex-start !important;
   gap: 3rem;
   margin-top: 3rem;
 }
@@ -1044,6 +1146,9 @@ footer .copy .social a img {
 .whyCourseUp .wrapper .card {
   background: none;
   border: none;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
 }
 
 .whyCourseUp .wrapper .cardHeading {
@@ -1115,11 +1220,84 @@ footer .copy .social a img {
   transition: 0.35s ease-in-out;
   outline: none;
   opacity: 0.4;
+  font-size: 0.9rem;
 }
 
 .courses .button-group button.is-checked {
   border-color: #506CF0;
   opacity: 1;
+}
+
+.courses .courseSliderControls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.courses .courseSliderControls .slick-dots {
+  text-align: left !important;
+  position: relative !important;
+  bottom: 0 !important;
+}
+
+.courses .courseSliderControls .slick-dots li {
+  margin-right: 4px;
+  width: 8px;
+  height: 8px;
+}
+
+.courses .courseSliderControls .slick-dots li button::before {
+  content: '' !important;
+  width: 8px;
+  height: 8px;
+  border-radius: 8px;
+  background: #506CF0;
+  opacity: 0.3;
+}
+
+.courses .courseSliderControls .slick-dots li.slick-active button::before {
+  opacity: 1;
+}
+
+.courses .courseSliderControls .slickArrow {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.courses .courseSliderControls .slickArrow button {
+  border: none;
+  background: none;
+  outline: none;
+  margin-right: 1rem;
+}
+
+.courses .courseSliderControls .slickArrow .right {
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+}
+
+.courses .courseSliderControls .slickArrow button {
+  margin-right: 0rem;
+}
+
+.courses .courseSliderControls .slickArrow button.slickBtn {
+  background: white;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  -webkit-box-shadow: 0px 0px 6px #00000029;
+          box-shadow: 0px 0px 6px #00000029;
+}
+
+.courses .courseSliderControls .slickArrow button.slickBtn img {
+  width: 15px;
 }
 
 .bar {
@@ -1397,6 +1575,14 @@ footer .copy .social a img {
   font-size: 0.8rem;
 }
 
+.faq .card-body {
+  padding: 0 1.25rem 1rem 1.25rem !important;
+}
+
+.faq p {
+  font-size: 0.88rem !important;
+}
+
 .faq .heading {
   text-align: center;
   margin-bottom: 2rem;
@@ -1473,7 +1659,7 @@ footer .copy .social a img {
   -webkit-box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   margin-top: 120px;
-  padding: 2rem;
+  padding: 2.5rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1486,7 +1672,7 @@ footer .copy .social a img {
 }
 
 .testimonials .liveDemo .line {
-  width: 8px;
+  width: 10px;
   height: 100px;
   border-radius: 5px;
   background: white;
@@ -1495,7 +1681,7 @@ footer .copy .social a img {
 .testimonials .liveDemo .text {
   color: white;
   text-align: left;
-  padding: 0 2rem;
+  padding: 0 2.5rem;
   max-width: 70%;
   width: 100%;
 }
@@ -1505,9 +1691,19 @@ footer .copy .social a img {
   margin-top: 0.5rem;
 }
 
+.testimonials .liveDemo .text .heading h2 {
+  font-weight: 700;
+}
+
 .testimonials .liveDemo .button {
   width: 30%;
   text-align: center;
+}
+
+.testimonials .liveDemo .button .btn {
+  width: 100%;
+  border-radius: 10px;
+  color: #101010;
 }
 
 .aboutUs {

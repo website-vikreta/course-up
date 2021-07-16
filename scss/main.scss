@@ -5,6 +5,7 @@
 @import "./Utilities/spacing";
 
 @import "./Components/btns";
+@import "./Components/preloader";
 @import "./Components/navigation";
 @import "./Components/footer";
 
@@ -25,7 +26,8 @@
 
    [class *=col-] {
       height: 100vh;
-      @include flex-center;
+      display: flex;
+      align-items: center;
    }
 
    // layer blur
@@ -60,7 +62,8 @@
    }
 
    .content {
-      width: 100%;
+      width: 80%;
+      padding: 1rem;
 
       h1 {
          font-size: 3rem;
@@ -71,10 +74,10 @@
 
       p {
          @include para1 {
-            @include opacity(0.6);
+            @include opacity(0.5);
          }
 
-         margin-top: 8px;
+         margin-top: 10px;
       }
 
       a {
@@ -126,12 +129,14 @@
 
    .wrapper {
       @include flex-center;
+      align-items: flex-start !important;
       gap: 3rem;
       margin-top: 3rem;
 
       .card {
          background: none;
          border: none;
+         flex: 1
       }
 
       .cardHeading {
@@ -186,10 +191,36 @@
          transition: $transition;
          outline: none;
          opacity: 0.4;
+         font-size: 0.9rem;
 
          &.is-checked {
             border-color: $blue-color;
             opacity: 1;
+         }
+      }
+   }
+
+   .courseSliderControls {
+      @include flex-center;
+      @include slick-dots;
+
+      @include slick-arrow {
+         display: flex;
+
+         button {
+            margin-right: 0rem;
+         }
+
+         button.slickBtn {
+            background: white;
+            border-radius: 50px;
+            width: 40px;
+            height: 40px;
+            box-shadow: $box-shadow4;
+
+            img {
+               width: 15px;
+            }
          }
       }
    }
@@ -343,6 +374,14 @@
    @include accordion {
       max-width: 800px !important;
       margin: auto;
+
+      .card-body {
+         padding: 0 1.25rem 1rem 1.25rem !important;
+      }
+
+      p {
+         font-size: 0.88rem !important;
+      }
    }
 
    .heading {
@@ -406,14 +445,14 @@
       border-radius: 10px;
       box-shadow: $box-shadow;
       margin-top: 120px;
-      padding: 2rem;
+      padding: 2.5rem;
 
       display: flex;
       align-items: center;
       justify-content: space-between;
 
       .line {
-         width: 8px;
+         width: 10px;
          height: 100px;
          border-radius: 5px;
          background: white;
@@ -422,7 +461,7 @@
       .text {
          color: white;
          text-align: left;
-         padding: 0 2rem;
+         padding: 0 2.5rem;
          max-width: 70%;
          width: 100%;
 
@@ -430,11 +469,21 @@
             opacity: 0.6;
             margin-top: 0.5rem;
          }
+
+         .heading h2 {
+            @include font-weight(bold);
+         }
       }
 
       .button {
          width: 30%;
          text-align: center;
+
+         .btn {
+            width: 100%;
+            border-radius: 10px;
+            color: $dark-color
+         }
       }
    }
 }

@@ -76,12 +76,17 @@
    }
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:769px) {
+
    .hero {
       @include flex-center;
 
       .row {
          flex-direction: column-reverse;
+      }
+
+      .content {
+         width: 100% !important;
       }
 
       .content h1 {
@@ -131,18 +136,20 @@
 
       .wrapper {
          display: flex;
-         flex-wrap: wrap;
+         flex-wrap: wrap !important;
          gap: 2rem !important;
       }
 
       .card {
          max-width: 100%;
+         width: 100% !important;
          display: flex !important;
          align-items: center !important;
          gap: 1rem !important;
          flex-direction: row !important;
          text-align: left;
          flex-wrap: initial !important;
+         flex: initial !important;
       }
 
       .card .image {
@@ -181,7 +188,14 @@
    }
 
    .cta .row {
-      gap: 1rem !important;
+      gap: 0.25rem !important;
+      margin: 2rem 0 0 !important;
+      width: 100%;
+      justify-content: space-between !important;
+
+      .btn {
+         min-width: 160px !important;
+      }
    }
 
    .teachers .teacherSlider {

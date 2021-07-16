@@ -1,13 +1,23 @@
+// ? removing preloader
+// ? ====================================================
+window.addEventListener("load", function () {
+   const preloader = document.querySelector("#preloader");
+   preloader.classList.add("hide");
+})
+
 // ? isotope filtering
 // ? ====================================================
 $('.coursesSlider').slick({
-   dots: false,
+   dots: true,
    infinite: true,
    speed: 300,
    slidesToShow: 4,
-   slidesToScroll: 2,
+   slidesToScroll: 1,
    autoplay: true,
    autoplaySpeed: 2000,
+   appendDots: $("#courseSliderDots"),
+   prevArrow: $("#coursesArrow .left"),
+   nextArrow: $("#coursesArrow .right"),
    responsive: [
       {
          breakpoint: 1024,
@@ -102,13 +112,6 @@ $('.teacherSlider').slick({
          breakpoint: 600,
          settings: {
             slidesToShow: 2,
-         }
-      },
-      {
-         breakpoint: 480,
-         settings: {
-            slidesToShow: 1,
-            slidesToScroll: 1
          }
       }
    ]

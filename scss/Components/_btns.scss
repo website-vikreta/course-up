@@ -37,4 +37,8 @@
    .btn {
       padding: 0.4 !important;
    }
+
+   .btn:hover:after {
+      display: none !important
+   }
 }
