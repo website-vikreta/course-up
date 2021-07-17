@@ -64,8 +64,17 @@ footer {
          gap: 2rem;
       }
 
-      [class *=col-] {
-         padding: 0 1rem;
+      .column {
+         padding: 0;
+         margin: 1rem 0 2rem 0;
+         flex: 1;
+      }
+
+      .linksWrapper {
+         display: flex;
+         align-items: flex-start;
+         gap: 1.5rem;
+         flex-wrap: wrap;
       }
 
       a {
@@ -118,16 +127,13 @@ footer {
 @media screen and (max-width: 768px) {
    footer {
       .links {
-         .row {
-            display: flex !important;
+         .linksWrapper {
+            gap: 1rem;
          }
 
-         [class *=col-] {
-            padding: 0 1rem !important;
-
-            &:first-child {
-               margin: 1rem 0 0 !important;
-            }
+         .column {
+            min-width: calc(50% - 1rem) !important;
+            margin-bottom: 0 !important;
          }
 
          .heading {

@@ -558,6 +558,27 @@
       }
    }
 
+   .manyMore {
+      @include para2 {
+         @include font-weight(light);
+         width: min-content;
+         white-space: nowrap;
+         margin: 1rem 1.5rem 1rem auto;
+         position: relative;
+
+         &:after {
+            @include position($top: 50%, $right:-1rem) {
+               transform: translateY(-50%);
+               content: '';
+               width: 10px;
+               height: 10px;
+               background: $dark-color;
+               clip-path: polygon(0 0, 100% 50%, 0 100%);
+            }
+         }
+      }
+   }
+
    // infographics
    .infographics,
    .additionalDetails {
