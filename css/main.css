@@ -144,6 +144,14 @@ body {
   font-weight: 700;
 }
 
+.coursesSlider .card .cardBody .cardHeading a {
+  color: #101010;
+}
+
+.coursesSlider .card .cardBody .cardHeading a:hover {
+  color: #506CF0;
+}
+
 .coursesSlider .card .cardBody .cardHeading .author {
   font-size: 0.9rem;
   color: #101010;
@@ -926,6 +934,15 @@ footer .copy .social a img {
   }
   .teachers .btn {
     margin-top: 1.5rem !important;
+  }
+  .teachers .card {
+    margin-right: 0.5rem !important;
+  }
+  .teachers .card .content {
+    padding: 0.8rem 0.5rem !important;
+  }
+  .teachers .card .cardHeading {
+    font-size: 1rem !important;
   }
   .testimonials .liveDemo {
     -webkit-box-orient: vertical !important;

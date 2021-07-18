@@ -101,6 +101,14 @@ body {
                }
             }
 
+            a {
+               color: $dark-color;
+
+               &:hover {
+                  color: $blue-color
+               }
+            }
+
             .author {
                @include para2 {
                   @include opacity(0.7);
