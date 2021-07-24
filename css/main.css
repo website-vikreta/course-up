@@ -1619,7 +1619,7 @@ footer .copy .social a img {
 }
 
 .faq .card-body h4 {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .faq .card-body p {
@@ -1627,6 +1627,7 @@ footer .copy .social a img {
   color: #101010;
   font-weight: 300;
   opacity: 0.7;
+  font-size: 1rem;
 }
 
 .faq .card-body li {
@@ -1850,7 +1851,7 @@ footer .copy .social a img {
 }
 
 .courseDetails .card-body h4 {
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .courseDetails .card-body p {
@@ -1858,6 +1859,7 @@ footer .copy .social a img {
   color: #101010;
   font-weight: 300;
   opacity: 0.7;
+  font-size: 1rem;
 }
 
 .courseDetails .card-body li {

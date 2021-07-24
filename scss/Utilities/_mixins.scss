@@ -108,13 +108,14 @@
       padding: 0rem 2rem 1rem 2rem;
 
       h4 {
-         font-size: 0.9rem;
+         font-size: 1.1rem;
       }
 
       p {
          @include para3 {
             @include font-weight(light);
             @include opacity(0.7);
+            font-size: 1rem;
          }
       }
 
