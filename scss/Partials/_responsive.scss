@@ -261,6 +261,18 @@
          margin: 2.5rem 0;
       }
 
+      .heading {
+         margin-top: 1rem !important;
+      }
+
+      .fixedCard.first {
+         display: block !important;
+         margin-top: 02rem !important;
+         margin-bottom: 2rem !important;
+         position: relative !important;
+         top: 0 !important;
+      }
+
    }
 
    .relatedCourses {

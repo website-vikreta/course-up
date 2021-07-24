@@ -989,6 +989,16 @@ footer .copy .social a img {
     padding: 1rem !important;
     margin: 2.5rem 0;
   }
+  .courseDetails .heading {
+    margin-top: 1rem !important;
+  }
+  .courseDetails .fixedCard.first {
+    display: block !important;
+    margin-top: 02rem !important;
+    margin-bottom: 2rem !important;
+    position: relative !important;
+    top: 0 !important;
+  }
   .relatedCourses {
     margin-bottom: 2rem !important;
   }
@@ -2045,6 +2055,10 @@ footer .copy .social a img {
   height: 4px;
   border-radius: 4px;
   background: white;
+}
+
+.courseDetails .fixedCard.first {
+  display: none;
 }
 
 .courseDetails .fixedCard .heading h4 {
