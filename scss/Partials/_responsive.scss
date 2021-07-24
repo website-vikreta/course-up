@@ -248,6 +248,19 @@
 
    .courseDetails {
       padding: 120px 0 2rem 0 !important;
+
+      .container {
+         padding: 0 1.5rem !important;
+      }
+
+      .courseDescription,
+      .infographics,
+      .fixedCard,
+      .additionalDetails {
+         padding: 1rem !important;
+         margin: 2.5rem 0;
+      }
+
    }
 
    .relatedCourses {

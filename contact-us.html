@@ -64,19 +64,21 @@
                <div class="heading two d-none">
                   <h2>Thanks for your interest in CourseUp!</h2>
                </div>
-               <form action="" class="contactForm">
+               <form action="" class="contactForm" method="POST">
                   <div class="ill">
                      <img src="./assets/svgs/contact-illustration.svg" alt="Contact Image">
                   </div>
                   <div class="inputs">
                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter name">
+                        <input type="text" class="form-control" placeholder="Enter name" required
+                           pattern="[A-Za-z0-9]+">
                      </div>
                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter email">
+                        <input type="email" class="form-control" placeholder="Enter email" required>
                      </div>
                      <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Enter contact number">
+                        <input type="text" class="form-control" placeholder="Enter contact number" required
+                           pattern="[7-9]{1}[0-9]{9}">
                      </div>
                      <input type="submit" value="submit" class="btn solid">
                   </div>

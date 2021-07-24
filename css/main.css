@@ -454,6 +454,19 @@ body.scroll-up .navbar {
   transition: 0.35s ease-in-out;
 }
 
+.navbar ul li.contact a:after {
+  display: none;
+}
+
+.navbar ul li.contact .btn {
+  padding: 0.5rem 1.5rem !important;
+  min-width: initial !important;
+}
+
+.navbar ul li.contact .btn:hover {
+  color: white;
+}
+
 @media screen and (max-width: 1300px) {
   .navbar ul {
     gap: 2.2rem;
@@ -966,6 +979,16 @@ footer .copy .social a img {
   .courseDetails {
     padding: 120px 0 2rem 0 !important;
   }
+  .courseDetails .container {
+    padding: 0 1.5rem !important;
+  }
+  .courseDetails .courseDescription,
+  .courseDetails .infographics,
+  .courseDetails .fixedCard,
+  .courseDetails .additionalDetails {
+    padding: 1rem !important;
+    margin: 2.5rem 0;
+  }
   .relatedCourses {
     margin-bottom: 2rem !important;
   }
@@ -1249,7 +1272,7 @@ footer .copy .social a img {
   transition: 0.35s ease-in-out;
   outline: none;
   opacity: 0.4;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
 }
 
 .courses .button-group button.is-checked {
@@ -1604,12 +1627,16 @@ footer .copy .social a img {
   font-size: 0.8rem;
 }
 
+.faq .card-header button {
+  font-size: 1.1rem !important;
+}
+
 .faq .card-body {
   padding: 0 1.25rem 1rem 1.25rem !important;
 }
 
 .faq p {
-  font-size: 0.88rem !important;
+  font-size: 1rem !important;
 }
 
 .faq .heading {
@@ -2171,6 +2198,22 @@ footer .copy .social a img {
   padding: 1.25rem;
   border: 1px solid #AEAEAE;
   border-radius: 0;
+}
+
+.contactUs .contactForm .inputs input:not(input[type=submit])::-webkit-input-placeholder {
+  opacity: 0.5;
+}
+
+.contactUs .contactForm .inputs input:not(input[type=submit]):-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.contactUs .contactForm .inputs input:not(input[type=submit])::-ms-input-placeholder {
+  opacity: 0.5;
+}
+
+.contactUs .contactForm .inputs input:not(input[type=submit])::placeholder {
+  opacity: 0.5;
 }
 
 .contactUs .contactForm .inputs input[type=submit] {

@@ -77,6 +77,21 @@ body.scroll-up .navbar {
             transition: $transition;
          }
       }
+
+      li.contact {
+         a:after {
+            display: none;
+         }
+
+         .btn {
+            padding: 0.5rem 1.5rem !important;
+            min-width: initial !important;
+         }
+
+         .btn:hover {
+            color: white;
+         }
+      }
    }
 }
 

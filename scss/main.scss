@@ -191,7 +191,7 @@
          transition: $transition;
          outline: none;
          opacity: 0.4;
-         font-size: 0.9rem;
+         font-size: 1.1rem;
 
          &.is-checked {
             border-color: $blue-color;
@@ -375,12 +375,18 @@
       max-width: 800px !important;
       margin: auto;
 
+      .card-header {
+         button {
+            font-size: 1.1rem !important;
+         }
+      }
+
       .card-body {
          padding: 0 1.25rem 1rem 1.25rem !important;
       }
 
       p {
-         font-size: 0.88rem !important;
+         font-size: 1rem !important;
       }
    }
 
@@ -806,6 +812,10 @@
             padding: 1.25rem;
             border: 1px solid $gray-color;
             border-radius: 0;
+
+            &::placeholder {
+               opacity: 0.5;
+            }
          }
 
          input[type=submit] {
