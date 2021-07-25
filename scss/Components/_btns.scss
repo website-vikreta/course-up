@@ -30,6 +30,10 @@
       top: 0.8rem;
       left: 0.8rem;
    }
+
+   &.dark:hover {
+      color: $blue-color !important;
+   }
 }
 
 
