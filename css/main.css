@@ -319,7 +319,7 @@ body {
   height: 5px;
   width: 50px;
   border-radius: 5px;
-  background: #E83151;
+  background: #506CF0;
   z-index: -1;
   -webkit-animation: animate 2s ease-in-out alternate infinite;
           animation: animate 2s ease-in-out alternate infinite;
