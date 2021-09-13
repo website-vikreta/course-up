@@ -10,7 +10,7 @@ body.scroll-up .navbar {
 }
 
 .navbar {
-   padding: 2rem 0;
+   padding: 1rem 0;
    position: fixed;
    top: 0;
    left: 0;
@@ -37,7 +37,7 @@ body.scroll-up .navbar {
          display: inline-block;
 
          img {
-            max-width: 120px;
+            max-width: 180px;
          }
       }
    }
@@ -125,6 +125,10 @@ body.scroll-up .navbar {
 
          a {
             font-size: 1.5rem;
+         }
+
+         img {
+            width: 150px;
          }
 
          .toggleBtn {

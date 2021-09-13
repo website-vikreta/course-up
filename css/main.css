@@ -361,7 +361,7 @@ body.scroll-up .navbar {
 }
 
 .navbar {
-  padding: 2rem 0;
+  padding: 1rem 0;
   position: fixed;
   top: 0;
   left: 0;
@@ -408,7 +408,7 @@ body.scroll-up .navbar {
 }
 
 .navbar .logo a img {
-  max-width: 120px;
+  max-width: 180px;
 }
 
 .navbar ul {
@@ -497,6 +497,9 @@ body.scroll-up .navbar {
   }
   .navbar .logo a {
     font-size: 1.5rem;
+  }
+  .navbar .logo img {
+    width: 150px;
   }
   .navbar .logo .toggleBtn {
     display: block;
@@ -831,6 +834,8 @@ footer .copy .social a img {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    padding-top: 70px;
+    height: auto;
   }
   .hero .row {
     -webkit-box-orient: vertical;
@@ -936,9 +941,11 @@ footer .copy .social a img {
     gap: 0.25rem !important;
     margin: 2rem 0 0 !important;
     width: 100%;
-    -webkit-box-pack: justify !important;
-        -ms-flex-pack: justify !important;
-            justify-content: space-between !important;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .cta .row .btn {
     min-width: 160px !important;

@@ -80,6 +80,8 @@
 
    .hero {
       @include flex-center;
+      padding-top: 70px;
+      height: auto;
 
       .row {
          flex-direction: column-reverse;
@@ -191,7 +193,8 @@
       gap: 0.25rem !important;
       margin: 2rem 0 0 !important;
       width: 100%;
-      justify-content: space-between !important;
+      justify-content: center !important;
+      flex-wrap: wrap;
 
       .btn {
          min-width: 160px !important;
